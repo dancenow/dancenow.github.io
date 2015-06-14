@@ -130,16 +130,16 @@ global.mapinit = function () {
           var icon;
           switch (mark.type) {
             case MarkTypes.NotStarted:
-              icon = "dist/images/pin-azure-72.png";
+              icon = "/dist/images/pin-azure-72.png";
               break;
             case MarkTypes.Ongoing:
-              icon = "dist/images/pin-green-72.png";
+              icon = "/dist/images/pin-green-72.png";
               break;
             case MarkTypes.Cancelled:
-              icon = "dist/images/pin-pink-72.png";
+              icon = "/dist/images/pin-pink-72.png";
               break;
             default:
-              icon = "dist/images/pin-azure-72.png";
+              icon = "/dist/images/pin-azure-72.png";
               break;
           }
           map.addMarker(map.createMarker({
