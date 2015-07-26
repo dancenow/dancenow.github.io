@@ -1,0 +1,99 @@
+<div>
+  <div id="event" class="js-event" data-role="popup" data-tolerance="0,0" data-theme="a" data-position-to="window"
+       data-transition="pop" class="noselect">
+    <div hidden class="js-template">
+      {{#status.ongoing}}
+      <div data-role="header" style="background-color: greenyellow;">
+        <h5 class="wide-header">Сейчас идет:</h5>
+        <a href="#" data-rel="back" class="ui-btn-right ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">
+          &nbsp;</a>
+      </div>
+      {{/status.ongoing}}
+
+      {{#status.notStarted}}
+      <div data-role="header" style="background-color: deepskyblue;">
+        <h5 class="wide-header">Начнется в {{from}}:</h5>
+        <a href="#" data-rel="back" class="ui-btn-right ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">
+          &nbsp;</a>
+      </div>
+      {{/status.notStarted}}
+
+      {{#status.cancelled}}
+      <div data-role="header" style="background-color: red;">
+        <h5 class="wide-header">Отменено:</h5>
+        <a href="#" data-rel="back" class="ui-btn-right ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">
+          &nbsp;</a>
+      </div>
+      {{/status.cancelled}}
+
+      <div data-role="header"><h3 class="wide-header">{{title}} ({{what}})</h3></div>
+      <div data-role="main">
+        {{#notCancelled}}
+        <div class="ui-grid-a">
+          <div class="ui-block-a">
+            <div data-role="header"><h5 class="wide-header">{{countText}}:</h5></div>
+            <div data-role="main" style="text-align: center; height: 100%;">
+              <h1 class="count">{{totalCount}}</h1>
+              <h3 class="count-text">танцоров</h3>
+            </div>
+          </div>
+          <div class="ui-block-b">
+            <div data-role="header"><h5 class="wide-header">Диджей:</h5></div>
+            <div data-role="main" style="text-align: center; height: 100%;">
+              <div style="background-image: url('{{djPhotoUrl}}'); width: 200px; height: 200px;" alt="Фото диджея"></div>
+              <h3 class="count-text">{{djNickname}}</h3>
+            </div>
+          </div>
+          <div class="ui-block-a">
+            {{#guysPresent}}
+            <div data-role="header"><h5 class="wide-header">Партнеры:</h5></div>
+            <ul data-role="listview">
+              {{#guys}}
+              <li class="checkin"><span class="checkin-photo"
+                                        style="background-image: url('{{photoUrl}}');">&nbsp;</span><span
+                class="checkin-name">{{name}}</span></li>
+
+              {{/guys}}
+              {{#moreGuysCount}}
+                <li class="andmore">И еще {{moreGuysCount}}...</li>
+              {{/moreGuysCount}}
+            </ul>
+            {{/guysPresent}}
+          </div>
+          <div class="ui-block-b">
+            {{#girlsPresent}}
+            <div data-role="header"><h5 class="wide-header">Партнерши:</h5></div>
+            <ul data-role="listview">
+              {{#girls}}
+              <li class="checkin"><span class="checkin-photo"
+                                        style="background-image: url('{{photoUrl}}');">&nbsp;</span><span
+                class="checkin-name">{{name}}</span></li>
+
+              {{/girls}}
+              {{#moreGirlsCount}}
+                <li class="andmore">И еще {{moreGirlsCount}}...</li>
+              {{/moreGirlsCount}}
+            </ul>
+            {{/girlsPresent}}
+          </div>
+        </div>
+        {{/notCancelled}}
+
+        <div class="ui-bar ui-bar-a info-header">
+          <h4>Информация:</h4>
+        </div>
+        <div class="info">
+          <p>Танцы: <span class="js-dances-list">{{what}}</span></p>
+
+          <p>Где: <span class="js-address">{{where}}</span></p>
+
+          <p>Время: <span class="js-time">{{time}}</span></p>
+
+          <p>Вход: <span class="js-fee">{{fee}}</span></p>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div class="js-container"></div>
+  </div>
+</div>

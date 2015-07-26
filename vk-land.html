@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+  function getURLParameter(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+  }
+
+  var params = {
+    code: getURLParameter('code'),
+    error: getURLParameter('error'),
+    error_description: getURLParameter('error_description')
+  };
+
+  if(params['code'])
+    window.opener.dispatchEvent(new CustomEvent("vkLoginSuccess", {detail: {code : params['code']}}));
+  else if (params['error'])
+    window.opener.dispatchEvent(new CustomEvent("vkLoginError", {detail: {error : params['error'], error_description: params['error_description']}}));
+  else
+    window.opener.dispatchEvent(new CustomEvent("vkLoginError"));
+  window.close();
+</script>
+</body>
+</html>
