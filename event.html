@@ -5,14 +5,20 @@
       {{#status.ongoing}}
       <div data-role="header" style="background-color: greenyellow;">
         <h5 class="wide-header">Сейчас идет:</h5>
+        <a href="#" class="ui-btn-left ui-btn ui-icon-edit ui-btn-icon-notext ui-corner-all js-try-edit-event">
+          &nbsp;</a>
         <a href="#" data-rel="back" class="ui-btn-right ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">
           &nbsp;</a>
+
       </div>
       {{/status.ongoing}}
 
       {{#status.notStarted}}
       <div data-role="header" style="background-color: deepskyblue;">
         <h5 class="wide-header">Начнется в {{from}}:</h5>
+        <a href="#" class="ui-btn-left ui-btn ui-icon-edit ui-btn-icon-notext ui-corner-all js-try-edit-event">
+          &nbsp;</a>
+
         <a href="#" data-rel="back" class="ui-btn-right ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">
           &nbsp;</a>
       </div>
@@ -21,6 +27,8 @@
       {{#status.cancelled}}
       <div data-role="header" style="background-color: red;">
         <h5 class="wide-header">Отменено:</h5>
+        <a href="#" class="ui-btn-left ui-btn ui-icon-edit ui-btn-icon-notext ui-corner-all js-try-edit-event">
+          &nbsp;</a>
         <a href="#" data-rel="back" class="ui-btn-right ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">
           &nbsp;</a>
       </div>
@@ -34,13 +42,15 @@
             <div data-role="header"><h5 class="wide-header">{{countText}}:</h5></div>
             <div data-role="main" style="text-align: center; height: 100%;">
               <h1 class="count">{{totalCount}}</h1>
+
               <h3 class="count-text">танцоров</h3>
             </div>
           </div>
           <div class="ui-block-b">
             <div data-role="header"><h5 class="wide-header">Диджей:</h5></div>
             <div data-role="main" style="text-align: center; height: 100%;">
-              <div style="background-image: url('{{djPhotoUrl}}'); width: 200px; height: 200px;" alt="Фото диджея"></div>
+              <div style="background-image: url('{{djPhotoUrl}}'); width: 200px; height: 200px;"
+                   alt="Фото диджея"></div>
               <h3 class="count-text">{{djNickname}}</h3>
             </div>
           </div>
@@ -55,7 +65,7 @@
 
               {{/guys}}
               {{#moreGuysCount}}
-                <li class="andmore">И еще {{moreGuysCount}}...</li>
+              <li class="andmore">И еще {{moreGuysCount}}...</li>
               {{/moreGuysCount}}
             </ul>
             {{/guysPresent}}
@@ -71,14 +81,15 @@
 
               {{/girls}}
               {{#moreGirlsCount}}
-                <li class="andmore">И еще {{moreGirlsCount}}...</li>
+              <li class="andmore">И еще {{moreGirlsCount}}...</li>
               {{/moreGirlsCount}}
             </ul>
             {{/girlsPresent}}
           </div>
         </div>
+        <a href="#" class="js-rsvp" data-role="button">Я пойду</a>
+        <a href="#" class="js-cancel-rsvp" data-role="button">Не пойду</a>
         {{/notCancelled}}
-
         <div class="ui-bar ui-bar-a info-header">
           <h4>Информация:</h4>
         </div>
@@ -95,5 +106,12 @@
       </div>
     </div>
     <div class="js-container"></div>
+  </div>
+  <div id="edit-event-popup" class="js-edit-event-popup" data-role="popup" data-tolerance="0,0" data-theme="a"
+       data-position-to="window" data-transition="pop" class="noselect">
+
+    <a data-role="button" href="#" class="js-edit-ievent">Редактировать только эту вечеринку</a>
+    <a data-role="button" href="#" class="js-edit-event">Редактировать все такие вечеринки</a>
+
   </div>
 </div>

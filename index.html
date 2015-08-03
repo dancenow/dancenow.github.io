@@ -13,39 +13,44 @@
   <link rel="stylesheet" href="dist/styles.css"/>
 </div>
 <body>
-Загрузка...
+<div data-role="page" id="loading-page">Загрузка...</div>
 <!--<div hidden id="start-page" data-role="page">-->
 
-  <!--&lt;!&ndash;<div style="margin-top: 10%;" class="center">Танцуй сейчас!</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div style="margin-top: 10%;" class="center">Танцуй сейчас!</div>&ndash;&gt;-->
 
-  <!--<div style="margin-top: 10%;" class="center">-->
-    <!--<a href="#map-page" class="ui-btn">Где бы сегодня потанцевать?</a>-->
-    <!--&lt;!&ndash;<a href="#map-page" class="ui-btn">Где бы сегодня потанцевать</a>&ndash;&gt;-->
-    <!--&lt;!&ndash;<a href="#map-page" class="ui-btn">Я еду в другой город, куда там пойти?</a>&ndash;&gt;-->
-  <!--</div>-->
+<!--<div style="margin-top: 10%;" class="center">-->
+<!--<a href="#map-page" class="ui-btn">Где бы сегодня потанцевать?</a>-->
+<!--&lt;!&ndash;<a href="#map-page" class="ui-btn">Где бы сегодня потанцевать</a>&ndash;&gt;-->
+<!--&lt;!&ndash;<a href="#map-page" class="ui-btn">Я еду в другой город, куда там пойти?</a>&ndash;&gt;-->
+<!--</div>-->
 <!--</div>-->
 <div hidden id="map-page" data-role="page">
   <div data-role="header" id="map-page-header">
     <a href="#debug"
        class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext"></a>
-
     <h1 class="js-cityname"></h1>
   </div>
   <div role="main" id="map-page-content" class="ui-content">
     <div id="map"></div>
     <!--<a class="ui-btn-icon-notext ui-btn-icon-left" style="position: absolute; bottom:0px;left:0px;" href="#start-page"-->
-       <!--data-role="button" data-icon="back">Назад</a>-->
+    <!--data-role="button" data-icon="back">Назад</a>-->
   </div>
 
 </div>
-<div data-role="page" id="vk-login" hidden>
+<div hidden data-role="page" id="vk-login" hidden>
+  <div data-role="header">
+    <h3>Вход через VK</h3>
+    <a href="#map-page" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">Вернуться на карту</a>
+  </div>
   <a class="js-vk-login-button" hidden data-role="button">Войти через VK</a>
+
   <p class="red-text js-vk-login-error"></p>
-  <a href="#map-page" data-role="button">Вернуться на карту</a>
 </div>
 
-<div hidden id="test" data-role="page">
+<div hidden data-role="page" id="event-editor-page">
 
+</div>
+<div hidden id="test" data-role="page">
 </div>
 </body>
 </html>
