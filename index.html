@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="ru">
+  <!--<link rel="stylesheet" type="text/css" href="client/www/css/index.css"/>-->
 </head>
 <div hidden class="metahead">
   <meta charset="UTF-8">
@@ -52,5 +53,19 @@
 </div>
 <div hidden id="test" data-role="page">
 </div>
+<div hidden id="loggerConsole"></div>
+
 </body>
+
+
+<script type="text/javascript">
+  window.doorbellOptions = {
+    appKey: 'Gufq72xoLc71WKmGYzUtYu55BiLWmaIS3H7HdiTRHRmnPtCvYnbzvrkwakq2Pvw6'
+  };
+  (function(d, t) {
+    var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/1900?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g);
+  }(document, 'script'));
+</script>
+
+
 </html>
