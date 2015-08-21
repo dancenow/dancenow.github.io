@@ -10,7 +10,6 @@
   <!--<script src="external/jquery/jquery-2.1.3.js"></script>-->
   <!--<script src="external/jquery-mobile/jquery.mobile-1.4.5.js"></script>-->
   <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
-  <script src="dist/scripts.js"></script>
   <link rel="stylesheet" href="dist/styles.css"/>
 </div>
 <body>
@@ -48,12 +47,13 @@
   <p class="red-text js-vk-login-error"></p>
 </div>
 
-<div hidden data-role="page" id="event-editor-page">
-
-</div>
 <div hidden id="test" data-role="page">
 </div>
-<div hidden id="loggerConsole"></div>
+
+<div id="popup-container"></div>
+<div hidden data-role="page" id="logs-page">
+  <div id="logger-console"></div>
+</div>
 
 </body>
 
@@ -67,5 +67,6 @@
   }(document, 'script'));
 </script>
 
+<script src="dist/scripts.js"></script>
 
 </html>
