@@ -8,47 +8,50 @@
       <h3 class="debugpanel-title">Client v<span class="js-client-version">?</span> Server v<span
         class="js-server-version">?</span></h3>
     </div>
-    <div class="ui-field-contain">
-      <div class="ui-field-contain">
-        <label for="apiServer">Сервер API:</label>
-        <select id="apiServer" data-native-menu="true">
-          <option value="candymaker">candymaker</option>
-          <option value="mock">mock</option>
-          <option value="dancenow.local">dancenow.local</option>
-          <option value="malcoriel.us.to">malcoriel.us.to</option>
-          <option value="vkuzmin">vkuzmin</option>
-          <option value="malc-laptop">malc-laptop</option>
+
+    <div class="debug-panel-content">
+      <div class="ui-field-contain js-hide-production">
+        <div class="ui-field-contain">
+          <label for="apiServer">Сервер API:</label>
+          <select id="apiServer" data-native-menu="true">
+            <option value="candymaker">candymaker</option>
+            <option value="mock">mock</option>
+            <option value="dancenow.local">dancenow.local</option>
+            <option value="malcoriel.us.to">malcoriel.us.to</option>
+            <option value="vkuzmin">vkuzmin</option>
+            <option value="malc-laptop">malc-laptop</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="ui-field-contain js-hide-production">
+        <label for="alertErrorsFlip">Ошибки в alert</label>
+        <select id="alertErrorsFlip" data-role="slider" data-mini="true">
+          <option value="0" selected>Выкл</option>
+          <option value="1">Вкл</option>
         </select>
+
       </div>
 
-    </div>
-    <div class="ui-field-contain">
-      <label for="alertErrorsFlip">Ошибки в alert</label>
-      <select id="alertErrorsFlip" data-role="slider" data-mini="true">
-        <option value="0" selected>Выкл</option>
-        <option value="1">Вкл</option>
-      </select>
+      <div class="ui-field-contain js-hide-production">
+        <label for="showDebugLocationFlip">Показывать местоположение</label>
+        <select id="showDebugLocationFlip" data-role="slider" data-mini="true">
+          <option value="0" selected>Выкл</option>
+          <option value="1">Вкл</option>
+        </select>
 
+      </div>
+      <div hidden class="js-user-info user-info">
+        <span class="js-user-photo user-photo"/>
+        <span class="js-user-name user-name"></span>
+      </div>
+      <a data-role="button" href="#" class="js-mapinit-button" data-icon="gear">Обновить карту</a>
+      <a data-role="button" href="#vk-login" data-rel="close">Вход через VK</a>
+      <a data-role="button" href="#" class="js-mock-login js-hide-production" data-rel="close">Mock login</a>
+      <a data-role="button" href="#event-editor-page" class="js-create-event-button js-hide-production" data-rel="close">Новая вечеринка</a>
+      <a data-role="button" href="good-page.html" class="js-hide-production">Good page</a>
+      <a data-role="button" href="#logs-page" class="js-hide-production">Логи</a>
+      <a data-role="button" href="#" data-rel="close" data-icon="delete">Закрыть</a>
     </div>
-
-    <div class="ui-field-contain">
-      <label for="showDebugLocationFlip">Показывать местоположение</label>
-      <select id="showDebugLocationFlip" data-role="slider" data-mini="true">
-        <option value="0" selected>Выкл</option>
-        <option value="1">Вкл</option>
-      </select>
-
-    </div>
-    <div hidden class="js-user-info user-info">
-      <span class="js-user-photo user-photo"/>
-      <span class="js-user-name user-name"></span>
-    </div>
-    <a data-role="button" href="#" class="js-mapinit-button" data-icon="gear">Инициализация карты</a>
-    <a data-role="button" href="#vk-login" data-rel="close">Вход через VK</a>
-    <a data-role="button" href="#" class="js-mock-login" data-rel="close">Mock login</a>
-    <a data-role="button" href="#event-editor-page" class="js-create-event-button" data-rel="close">Новая вечеринка</a>
-    <a data-role="button" href="good-page.html">Good page</a>
-    <a data-role="button" href="#logs-page">Логи</a>
-    <a data-role="button" href="#" data-rel="close" data-icon="delete">Закрыть</a>
   </div>
 </div>
