@@ -47,7 +47,9 @@
   <p class="red-text js-vk-login-error"></p>
 </div>
 
-<div hidden id="test" data-role="page">
+<div hidden id="event-page" data-role="page">
+  <div id="react-app"></div>
+  <!--<link rel="stylesheet" href="webpackdist/webpack-styles.css"/>-->
 </div>
 
 <div hidden id="event-editor-page" data-role="page">
@@ -63,15 +65,17 @@
 </body>
 
 
-<script type="text/javascript">
-  window.doorbellOptions = {
-    appKey: 'Gufq72xoLc71WKmGYzUtYu55BiLWmaIS3H7HdiTRHRmnPtCvYnbzvrkwakq2Pvw6'
-  };
-  (function(d, t) {
-    var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/1900?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g);
-  }(document, 'script'));
-</script>
+<!--<script type="text/javascript">-->
+  <!--window.doorbellOptions = {-->
+    <!--appKey: 'Gufq72xoLc71WKmGYzUtYu55BiLWmaIS3H7HdiTRHRmnPtCvYnbzvrkwakq2Pvw6'-->
+  <!--};-->
+  <!--(function(d, t) {-->
+    <!--var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/1900?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g);-->
+  <!--}(document, 'script'));-->
+<!--</script>-->
 
 <script src="dist/scripts.js"></script>
+<script src="webpackdist/webpack-scripts.js"></script>
+<!--<link rel="stylesheet" href="webpackdist/webpack-styles.css"/>-->
 
 </html>
