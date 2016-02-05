@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head lang="ru">
-  <!--<link rel="stylesheet" type="text/css" href="client/www/css/index.css"/>-->
-</head>
-<div hidden class="metahead">
   <meta charset="UTF-8">
   <title>Танцуй сейчас!</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'self' 'unsafe-inline'; script-src * 'self' 'unsafe-inline' 'unsafe-eval'; img-src * data:">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="webpackdist/external/pace/atom.css"/>
-  <script data-pace-options='{"restartOnRequestAfter": false,  "restartOnPushState": false}' src="webpackdist/external/pace/pace.min.js"></script>
-  <script src="webpackdist/external/log4javascript/log4javascript_uncompressed.js"></script>
+</head>
+<div hidden class="metahead">
+  <link rel="stylesheet" href="webpackdist/atom.css"/>
+  <script data-pace-options='{"restartOnRequestAfter": false,  "restartOnPushState": false}' src="webpackdist/pace.min.js"></script>
+  <script src="webpackdist/log4javascript_uncompressed.js"></script>
   <style>
     body, html, #react-app {
       height: 100%
